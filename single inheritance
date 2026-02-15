@@ -1,0 +1,38 @@
+ /* single inheritance */
+
+#include<iostream>
+using namespace std;
+class book
+{
+  public:
+  string name;
+  string author;
+  void enterdetails()
+  {
+     cout<<" Enter the book name : ";
+     getline(cin,name);
+     cout<<" \nEnter the author name : ";
+     getline(cin,author);
+
+  
+}  };
+class mybook :public book
+{
+ public:
+    void display()
+    {
+      cout<<"******************* \n";
+      cout<<" \nBook name : "<<name;
+      cout<<" \nAuthor : "<<author;
+      cout<<"\n";
+    }
+  };
+  int main()
+{
+   mybook b1,b2;
+   b1.enterdetails();
+   b2.enterdetails();
+   b1.display();
+   b2.display();
+   }
+   
